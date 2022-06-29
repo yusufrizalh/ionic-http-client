@@ -1,3 +1,25 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+
+<!-- tab navigation -->
+<ion-tabs>
+  <ion-tab-bar>
+    <ion-tab-button
+      routerLinkActive="tab-selected"
+      routerLink="/list"
+      tab="list"
+    >
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Employees List</ion-label>
+    </ion-tab-button>
+    <ion-tab-button
+      routerLinkActive="tab-selected"
+      routerLink="/create"
+      tab="create"
+    >
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Add Employee</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
