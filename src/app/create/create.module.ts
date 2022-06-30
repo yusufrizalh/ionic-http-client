@@ -8,13 +8,16 @@ import { CreatePageRoutingModule } from './create-routing.module';
 
 import { CreatePage } from './create.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CreatePageRoutingModule
+    CreatePageRoutingModule,
+    ReactiveFormsModule,
   ],
-  declarations: [CreatePage]
+  declarations: [CreatePage],
 })
 export class CreatePageModule {}

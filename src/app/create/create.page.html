@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>create</ion-title>
+    <ion-title>Create Employee</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Employee Name</ion-label>
+        <ion-input formControlName="name" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Employee DoB</ion-label>
+        <ion-input formControlName="dob" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Employee Telephone</ion-label>
+        <ion-input formControlName="telephone" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Employee Email</ion-label>
+        <ion-input formControlName="email" type="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Employee Salary</ion-label>
+        <ion-input formControlName="salary" type="text" required></ion-input>
+      </ion-item>
 
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="secondary" expand="block"
+            >Add Employee</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
 </ion-content>

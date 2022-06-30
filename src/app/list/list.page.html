@@ -9,11 +9,19 @@
     <ion-item *ngFor="let emp of Employees">
       <ion-label>
         <h3><strong>{{ emp.name }}</strong></h3>
-        <h5>{{ emp.dob }}</h5>
+        <!-- <h5>{{ emp.dob }}</h5> -->
         <h5>{{ emp.telephone }}</h5>
         <h5>{{ emp.email }}</h5>
-        <h5>{{ emp.salary }}</h5>
+        <!-- <h5>{{ emp.salary }}</h5> -->
       </ion-label>
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/update/', emp.id]">
+          <ion-icon name="create" style="zoom: 1.5"></ion-icon>
+        </button>
+        <button ion-button clear (click)="removeEmployee(emp)">
+          <ion-icon name="trash" style="zoom: 1.5"></ion-icon>
+        </button>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>

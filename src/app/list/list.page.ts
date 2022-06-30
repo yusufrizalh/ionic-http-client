@@ -22,4 +22,13 @@ export class ListPage implements OnInit {
       this.Employees = res;
     });
   }
+
+  removeEmployee(employee, i) {
+    if (window.confirm('Are you sure to delete?')) {
+      this.employeesCrudService.deleteEmployee(employee.id).subscribe(() => {
+        console.log(`Employee is deleted!`);
+        this.ionViewDidEnter();
+      });
+    }
+  }
 }
